@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Libre+Baskerville&family=Roboto:wght@300&display=swap');
+/* Designing the above bar or nav bar */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+}
+
+nav ul {
+    margin: 5px;
+    border: 2px solid rgba(249, 251, 236, 0.36);
+    border-radius: 40px;
+    padding: 0px 50px;
+}
+
+.navli {
+    list-style-type: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+body {
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    width: 100vw;
+    height: 100vw;
+    background-repeat: no-repeat, repeat;
+    overflow: hidden;
+}
+
+/* Designening for the Turn */
+.turns {
+    border: 2px dashed #eaf115;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-left: none;
+    border-right: none;
+    width: 116px;
+}
+
+.player1 {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.player2 {
+    font-size: 24px;
+}
+
+.active {
+    display: none;
+}
+
+/* Designeing the container  */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Designeing the boxes */
+
+.box {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.boxes {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+
+}
+
+.boxes:nth-child(1),
+.boxes:nth-child(2),
+.boxes:nth-child(3) {
+    border-top: none;
+}
+
+.boxes:nth-child(3n+1) {
+    border-left: none;
+}
+
+.boxes:nth-child(3n) {
+    border-right: none;
+}
+
+.boxes:nth-child(7),
+.boxes:nth-child(8),
+.boxes:nth-child(9) {
+    border-bottom: none;
+}
+
+/* resets classs  */
+.resets {
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* reset button class  */
+.resetbtn {
+    height: 37px;
+    width: 90px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #64d6d6;
+    border-radius: 34px;
+}
+
+
+
+/* Showing the result   */
+.result {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.result h1 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgba(0, 0, 100, 0.5);
+    height: 65px;
+    width: 100vw;
+    text-align: center;
+}
+
+.restart {
+    height: 37px;
+    width: 90px;
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 20px;
+    background-color: #64d6d6;
+    border-radius: 34px;
+    color: #fd0000;
+}
+
+
+/*  extra for disable the classes */
+.disable {
+    pointer-events: none;
+}
+
+.inactive {
+    display: none;
+}
+
+.o {
+    color: #0c2fdd;
+}
+
+.x {
+    color: #45f459;
+}
+
+
+/* responsiveness  for mobiles */
+@media screen and (min-width:665px) and (max-width: 1300px) {
+    body {
+        height: 100vw;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+}
+
+@media screen and (min-width:311px) and (max-width: 800px) {
+    body {
+        height: 250vw;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+
+    .turns {
+        margin-top: 50px;
+    }
+
+    .resets {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width: 310px) {
+    body {
+        height: 258vw;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+    nav {
+        height: 62px;
+    }
+
+    nav ul {
+        padding: 0pc 20px;
+    }
+
+    .navli {
+        font-size: 33px;
+    }
+
+    .turns {
+        margin-top: 50px;
+    }
+
+    .resets {
+        margin-top: 50px;
+    }
+
+    .boxes {
+        height: 80px;
+        width: 80px;
+    }
+}
